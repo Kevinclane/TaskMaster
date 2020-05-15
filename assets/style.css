@@ -1,0 +1,17 @@
+.listItemsSpacing{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-blue{
+  background-color: blue;
+}
+
+.bg-green{
+  background-color: green;
+}
+
+.bg-red{
+  background-color: red;
+}
