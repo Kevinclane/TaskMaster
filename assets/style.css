@@ -6,12 +6,42 @@
 
 .bg-blue{
   background-color: blue;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 .bg-green{
   background-color: green;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 .bg-red{
-  background-color: red;
+  background-color: crimson;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.ml-35{
+  margin-left: 35%;
+}
+
+.flex-end{
+  justify-content: flex-end;
+}
+
+.box-shadow{
+  box-shadow: 2px 2px black;
+}
+
+.lt-text-shadow{
+  text-shadow: 2px 2px 2px gray ;
+}
+
+.border{
+  border: 2px solid black !important;
+}
+
+* button{
+  box-shadow: 2px 2px black;
 }

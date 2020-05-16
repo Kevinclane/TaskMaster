@@ -8,18 +8,33 @@ export default class List {
     this.color = data.color
     this.id = data.id || generateId();
   }
-  //Be sure to add the methods needed to create the view template for this model
-  //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
+
   get Template() {
     return /*html*/`
-    <div class="col-4">
-    <div class="card">
-      <div class="card-header text-center bg-${this.color}">
+    <div class="col-12 col-md-4 my-3">
+    <div class="card  box-shadow">
+      <div class="card-header text-center bg-${this.color} m-3 d-flex flex-end">
+        <span>
         ${this.listName}
-      </div>
+        </span>
+        <span class="ml-35">
+        <button onclick="app.listController.deleteList('${this.id}')" class="btn btn-secondary btn-sm">Delete</button>
+        </span>
+        </div>
       <ul class="list-group list-group-flush">
-        ${this.ListItemsTemplate}
+      ${this.ListItemsTemplate}
+       
       </ul>
+      <form onsubmit="app.listController.addListItem(event, '${this.id}')">
+        <div class="row m-3">
+          <div class = "col-8">
+            <input type="text" class="form-control" name="newListItem" placeholder="List Item">
+          </div>  
+          <div class="col-4">
+            <button type="submit" class="btn btn-success">Add to list</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
   `
@@ -32,10 +47,10 @@ export default class List {
       <li class="list-group-item listItemsSpacing">
       <span>
         <input type="checkbox" aria-label="Checkbox for following text input">
-        Vestibulum at eros
+        ${this.listItems[index]}
       </span>
       <span>
-        <button class="btn btn-danger" onclick="deleteItem(id)">Del</button>
+        <button class="btn btn-danger" onclick="app.listController.deleteItem('${this.id}', ${index})">Del</button>
       </span>
     </li>
       `
