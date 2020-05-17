@@ -13,7 +13,7 @@ export default class List {
     return /*html*/`
     <div class="col-12 col-md-4 my-3">
     <div class="card  box-shadow">
-      <div class="card-header text-center bg-${this.color} m-3 d-flex flex-end">
+      <div class="card-header text-center bg-${this.color} m-3 d-flex flex-end box-shadow">
         <span>
         ${this.listName}
         </span>

@@ -1,8 +1,6 @@
 import ListService from "../Services/ListService.js";
 import _store from "../store.js"
-import { generateId } from "../utils.js";
 
-//TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
   let lists = _store.State.lists
   let template = ''
@@ -16,7 +14,6 @@ export default class ListController {
     _drawLists();
   }
 
-  //TODO: Your app will need the ability to create, and delete both lists and listItems
   submitForm(event) {
     let formData = event.target
     event.preventDefault()

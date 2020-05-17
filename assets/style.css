@@ -1,3 +1,11 @@
+main{
+  flex-grow: 1;
+}
+
+.bgimg{
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/11/14/02/paper-2631126_1280.jpg);
+}
+
 .listItemsSpacing{
   display: flex;
   justify-content: space-between;
@@ -44,4 +52,9 @@
 
 * button{
   box-shadow: 2px 2px black;
+}
+
+.bg-grad{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,125,209,1) 50%, rgba(0,212,255,1) 100%);
 }
